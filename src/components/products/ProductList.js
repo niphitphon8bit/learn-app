@@ -10,7 +10,7 @@ class ProductList extends Component {
 
     render() {
         return (
-            <div>
+            <div className="row">
                 {this.showProduct()}
             </div>
         )

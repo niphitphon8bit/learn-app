@@ -8,15 +8,21 @@ class ProductItem extends Component {
     }
 
     render() {
-        const { product_name, price, thumbnail } = this.props;
+        const { product_name, price, thumbnail, product_nname, product_pos } = this.props;
+        const name = product_name.replace(" ", ` "${product_nname}" `)
         return (
-            <div className="col-md-3 col-sm-6">
-                <img className="img-fluid img-thumbnail" src={thumbnail} />
-                <h5 className="mt-2">Product : {product_name}</h5>
+            <div className="col-md-3 col-sm-6 ">
+                <br />
+                <div className="d-flex justify-content-center">
+                    <img className="img-fluid img-thumbnail" src={thumbnail} />
+                </div>
+                <h6 className="mt-2 fontsize">{name}</h6>
+                <h6 className="mt-2 fontsize">Position : {product_pos}</h6>
                 <p className="title text-right">Price : {price}</p>
                 <button className="btn btn-block btn-secondary title">
                     ซื้อ
                 </button>
+                <hr className="new1" />
             </div>
         )
     }
