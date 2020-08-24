@@ -23,6 +23,15 @@ h6 {
   color: white;
 }
 
+ .fontsize{
+  text-align: center;
+  font-size: 14px;
+}
+
+.font-content{
+  font-size: 12px;
+}
+
 .title {
   font-family: "Prompt-Regular";
   color: white;
@@ -30,4 +39,14 @@ h6 {
 
 body {
   background-color: #242424;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+hr.new1 {
+  border: 1px solid white;
 }
