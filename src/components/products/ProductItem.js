@@ -1,28 +1,22 @@
 import React, { Component } from 'react';
 
-// export const ProducturntItem = (props) => {
-//     const { productName, unitPrice } = props;
-//     return (
-//         <div>
-//             <p>Product : {productName}</p>
-//             <p>Price : {unitPrice}</p>
-//         </div>
-//     )
-// }
-
 class ProductItem extends Component {
 
     constructor(props) {
         super(props);
-        console.log('constructor|' + props.productName);
+        console.log('constructor | ' + props.product_name);
     }
 
     render() {
-        const { productName, unitPrice } = this.props;
+        const { product_name, price, thumbnail } = this.props;
         return (
-            <div>
-                <p>Product : {productName}</p>
-                <p>Price : {unitPrice}</p>
+            <div className="col-md-3 col-sm-6">
+                <img className="img-fluid img-thumbnail" src={thumbnail} />
+                <h5 className="mt-2">Product : {product_name}</h5>
+                <p className="title text-right">Price : {price}</p>
+                <button className="btn btn-block btn-secondary title">
+                    ซื้อ
+                </button>
             </div>
         )
     }
