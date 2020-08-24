@@ -32,7 +32,7 @@ class Header extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-light rounded-bottom " style={{ backgroundColor: '#2b2b2b' }}>
-                <h3 className="text-success"><img width="75" height="40" src={Logo} alt="images" /></h3>
+                <h3 className="text-success"><img width="75" height="40" src="/images/logo/logo.png" alt="images" /></h3>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
