@@ -7,9 +7,13 @@ class ProductItem extends Component {
         console.log('constructor | ' + props.product_name);
     }
 
+    doSomething(product_name){
+        console.log(product_name);
+    }
+
     render() {
         const { product_name, price, thumbnail, product_nname, product_pos } = this.props;
-        const name = product_name.replace(" ", ` "${product_nname}" `)
+        const name = product_name.replace(" ", ` "${product_nname}" `);
         return (
             <div className="col-md-3 col-sm-6 ">
                 <br />
@@ -19,8 +23,8 @@ class ProductItem extends Component {
                 <h6 className="mt-2 fontsize">{name}</h6>
                 <h6 className="mt-2 fontsize">Position : {product_pos}</h6>
                 <p className="title text-right">Price : {price}</p>
-                <button className="btn btn-block btn-secondary title">
-                    ซื้อ
+                <button className="btn btn-block btn-secondary title" onClick={(e) => console.log(e)}>
+                    ซื้อ 
                 </button>
                 <hr className="new1" />
             </div>
