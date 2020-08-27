@@ -12,7 +12,7 @@ class ProductItem extends Component {
     }
 
     render() {
-        const { product_name, price, thumbnail, product_nname, product_pos } = this.props;
+        const { product_name, price, thumbnail, product_nname, product_pos } = this.props.product;
         const name = product_name.replace(" ", ` "${product_nname}" `);
         return (
             <div className="col-md-3 col-sm-6 ">
@@ -23,7 +23,7 @@ class ProductItem extends Component {
                 <h6 className="mt-2 fontsize">{name}</h6>
                 <h6 className="mt-2 fontsize">Position : {product_pos}</h6>
                 <p className="title text-right">Price : {price}</p>
-                <button className="btn btn-block btn-secondary title" onClick={(e) => console.log(e)}>
+                <button className="btn btn-block btn-secondary title" onClick={()=> this.props.add_order(this.props.product)}>
                     ซื้อ 
                 </button>
                 <hr className="new1" />
